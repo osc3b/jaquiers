@@ -32,7 +32,7 @@ win = 0
 randoms = 0
 fin = 0
 muros = 0
-instance_create(x,y,ob_speed)
+instance_create(x,620,ob_speed)
 alarm[0] = 150
 alarm[4] = 30
 </string>
@@ -142,7 +142,7 @@ if (muros = 5){
 ob_muro.kill = 1
 if (randoms == 0)
 muros += 1
-alarm[0] = 65// tiempo de hasta el aumento de dificultad
+alarm[0] = 300// tiempo de hasta el aumento de dificultad
 alarm[1] = 60 // tiempo entre niveles se recomienda no tocar
 </string>
           </argument>
