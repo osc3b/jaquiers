@@ -697,7 +697,9 @@ switch(seleccionado){
     case -1:
         room_goto_previous();break;
     case 0: 
-        room_goto_next();break;
+        instance_create(0,0,ob_acceso_server_controller);
+        instance_destroy();
+        break;
     case 1:
         room_goto_previous();break;
 }

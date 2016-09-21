@@ -4,12 +4,26 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_cargando</sound>
+    <sound>sound\snd_escribiendo</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
     <sprite>sprites\menu_borde</sprite>
     <sprite>sprites\miantik</sprite>
     <sprite>sprites\sp_carga</sprite>
+    <sprite>sprites\monitor</sprite>
+    <sprite>sprites\negro</sprite>
+    <sprite>sprites\sp_logo</sprite>
+    <sprite>sprites\sp_haz</sprite>
+    <sprite>sprites\sp_muro</sprite>
+    <sprite>sprites\sp_player_1</sprite>
+    <sprite>sprites\sp_puerta</sprite>
+    <sprite>sprites\sp_random_letter</sprite>
+    <sprite>sprites\sp_speed</sprite>
+    <sprite>sprites\sp_start</sprite>
+    <sprite>sprites\sp_test</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,9 +37,25 @@
       <object>objects\generador_fuentesmenu2</object>
       <object>objects\camara</object>
       <object>objects\generador_fuentesmenu</object>
+      <object>objects\obj_monitor</object>
+      <object>objects\obj_logo</object>
+      <object>objects\obj_negro</object>
+      <object>objects\generador_login</object>
     </objects>
+    <object>objects\ob_acceso_server_controller</object>
+    <object>objects\ob_haz</object>
+    <object>objects\ob_muro</object>
+    <object>objects\ob_puerta</object>
+    <object>objects\ob_random_letter</object>
+    <object>objects\ob_speed</object>
+    <object>objects\ob_speedfade</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tm_loose</timeline>
+    <timeline>timelines\tm_win</timeline>
+  </timelines>
   <rooms name="rooms">
+    <room>rooms\inicio</room>
     <room>rooms\menu</room>
     <room>rooms\menu2</room>
   </rooms>
