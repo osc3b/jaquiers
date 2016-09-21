@@ -7,6 +7,10 @@
   <sounds name="sound">
     <sound>sound\snd_cargando</sound>
     <sound>sound\snd_escribiendo</sound>
+    <sound>sound\snd_sala_servers</sound>
+    <sound>sound\snd_teclado</sound>
+    <sound>sound\snd_tecla</sound>
+    <sound>sound\snd_musica_hl2_dubstep</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
@@ -18,12 +22,12 @@
     <sprite>sprites\sp_logo</sprite>
     <sprite>sprites\sp_haz</sprite>
     <sprite>sprites\sp_muro</sprite>
-    <sprite>sprites\sp_player_1</sprite>
     <sprite>sprites\sp_puerta</sprite>
     <sprite>sprites\sp_random_letter</sprite>
     <sprite>sprites\sp_speed</sprite>
     <sprite>sprites\sp_start</sprite>
     <sprite>sprites\sp_test</sprite>
+    <sprite>sprites\sp_title</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,14 +37,15 @@
   </fonts>
   <objects name="objects">
     <objects name="menu">
-      <object>objects\obj_carga</object>
-      <object>objects\generador_fuentesmenu2</object>
       <object>objects\camara</object>
       <object>objects\generador_fuentesmenu</object>
-      <object>objects\obj_monitor</object>
-      <object>objects\obj_logo</object>
-      <object>objects\obj_negro</object>
+      <object>objects\generador_ajustes</object>
+      <object>objects\generador_fuentesmenu2</object>
       <object>objects\generador_login</object>
+      <object>objects\obj_carga</object>
+      <object>objects\obj_logo</object>
+      <object>objects\obj_monitor</object>
+      <object>objects\obj_negro</object>
     </objects>
     <object>objects\ob_acceso_server_controller</object>
     <object>objects\ob_haz</object>
@@ -58,6 +63,7 @@
     <room>rooms\inicio</room>
     <room>rooms\menu</room>
     <room>rooms\menu2</room>
+    <room>rooms\menu_ajustes</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -39,6 +39,8 @@ escribir[2]=string_copy(frase_login[2],0,j);
 escribir[3]=string_copy(frase_login[3],0,j);
 alarma0=0;
 
+audio_play_sound(snd_teclado,0,false);
+
 </string>
           </argument>
         </arguments>
@@ -104,6 +106,7 @@ else{
     }
     else{
         if(alarma0==0){
+            audio_stop_sound(snd_teclado);
             alarm[0]=60;
             alarma0=1;
         }
