@@ -35,6 +35,9 @@ muros = 0
 instance_create(x,620,ob_speed)
 alarm[0] = 150
 alarm[4] = 30
+
+audio_play_sound(snd_musica_hl2_dubstep,0,true);
+audio_sound_gain(snd_musica_hl2_dubstep,0.5,0);
 </string>
           </argument>
         </arguments>
@@ -203,6 +206,32 @@ if (win == 1 &amp;&amp; j &lt; 41){
             i = 0
         }
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Volver al menu de fase
+
+room_goto(rm_menu2);
+audio_stop_sound(snd_musica_hl2_dubstep);
 </string>
           </argument>
         </arguments>

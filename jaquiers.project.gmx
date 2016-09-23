@@ -11,6 +11,9 @@
     <sound>sound\snd_teclado</sound>
     <sound>sound\snd_tecla</sound>
     <sound>sound\snd_musica_hl2_dubstep</sound>
+    <sound>sound\snd_rebote</sound>
+    <sound>sound\snd_musica_megalovania</sound>
+    <sound>sound\snd_damage</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
@@ -28,8 +31,16 @@
     <sprite>sprites\sp_start</sprite>
     <sprite>sprites\sp_test</sprite>
     <sprite>sprites\sp_title</sprite>
+    <sprite>sprites\sp_skull</sprite>
+    <sprite>sprites\sp_pokeball</sprite>
+    <sprite>sprites\sp_campo_batalla</sprite>
+    <sprite>sprites\sp_borde</sprite>
+    <sprite>sprites\sp_profesor_go</sprite>
+    <sprite>sprites\sp_dialogo</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_pokemon</background>
+  </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\font_menu</font>
@@ -54,16 +65,27 @@
     <object>objects\ob_random_letter</object>
     <object>objects\ob_speed</object>
     <object>objects\ob_speedfade</object>
+    <object>objects\ob_batalla</object>
+    <object>objects\ob_campo_batalla</object>
+    <object>objects\ob_skull</object>
+    <object>objects\ob_pokeball</object>
+    <object>objects\ob_borde</object>
+    <object>objects\ob_profesor_go</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>
     <timeline>timelines\tm_win</timeline>
+    <timeline>timelines\tm_batalla_pokemon</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\inicio</room>
-    <room>rooms\menu</room>
-    <room>rooms\menu2</room>
-    <room>rooms\menu_ajustes</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_menu2</room>
+    <room>rooms\rm_menu_ajustes</room>
+    <room>rooms\rm_0</room>
+    <room>rooms\rm_acceso_server</room>
+    <room>rooms\rm_terminado</room>
+    <room>rooms\rm_batalla</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

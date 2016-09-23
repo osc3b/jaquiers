@@ -52,7 +52,9 @@ vol=1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(seleccionado==1){
+            <string>///Cambiar volumen
+
+if(seleccionado==1){
     if keyboard_check(vk_right){
         if vol &lt; 1 vol += 0.1;
         audio_master_gain(vol);
@@ -588,7 +590,7 @@ switch(seleccionado){
     case 1:
         break;
     case 2:
-        room_goto(menu);
+        room_goto(rm_menu);
         break;
 }
 </string>

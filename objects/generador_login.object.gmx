@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>frase_login[0]="43.53.104.32 login:  ";
+            <string>///Inicializar textos, variables y sonidos
+
+frase_login[0]="43.53.104.32 login:  ";
 frase_login[1]="Password: ******* ";
 frase_login[2]="Successfully logged in ";
 frase_login[3]="@jaquierOS:~$ ";
@@ -49,17 +51,23 @@ audio_play_sound(snd_teclado,0,false);
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>222</id>
+        <id>224</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_menu</room>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -93,7 +101,9 @@ audio_play_sound(snd_teclado,0,false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(j&lt;longitud_frase){
+            <string>///Escribir letra a letra las frases guardadas, como si estubiese escribiendo
+
+if(j&lt;longitud_frase){
     escribir[i]=string_copy(frase_login[i],0,j);
     j+=1;
 }
@@ -180,10 +190,37 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_transformed(0, 0, escribir[0],0.5,0.5,1);
+            <string>///Dibujar el texto
+
+draw_text_transformed(0, 0, escribir[0],0.5,0.5,1);
 draw_text_transformed(0, 20, escribir[1],0.5,0.5,1);
 draw_text_transformed(0, 40, escribir[2],0.5,0.5,1);
 draw_text_transformed(0, 60, escribir[3],0.5,0.5,1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_stop_sound(snd_teclado);
+room_goto(rm_menu);
+instance_destroy();
 </string>
           </argument>
         </arguments>

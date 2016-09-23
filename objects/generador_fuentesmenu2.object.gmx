@@ -435,7 +435,9 @@ seleccionado=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(seleccionado&gt;=0){
+            <string>///Dibujar el &gt;
+
+if(seleccionado&gt;=0){
     draw_text(125+(seleccionado*400),380,"&gt;");
 }
 if(seleccionado==-1){
@@ -791,17 +793,18 @@ if(seleccionado==-1){
 
 switch(seleccionado){
     case -1:
-        room_goto_previous();
+        room_goto(rm_menu);
         break;
     case 0: 
         audio_stop_sound(snd_sala_servers);
-        instance_create(0,0,ob_acceso_server_controller);
-        audio_play_sound(snd_musica_hl2_dubstep,0,true);
-        audio_sound_gain(snd_musica_hl2_dubstep,0.6,0);
+        room_goto(rm_acceso_server);
         instance_destroy();
         break;
     case 1:
-        room_goto_previous();break;
+        room_goto(rm_batalla);
+        audio_stop_sound(snd_sala_servers);
+        instance_destroy();
+        break;
 }
 </string>
           </argument>

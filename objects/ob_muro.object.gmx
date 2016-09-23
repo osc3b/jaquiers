@@ -28,7 +28,7 @@
             <string>kill = 0
 if (ob_acceso_server_controller.randoms = 0)
 x = 232 * floor(random(4.99)) + 176
-y = -128
+y = 0
 vspeed = 24
 </string>
           </argument>

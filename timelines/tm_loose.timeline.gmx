@@ -27,6 +27,7 @@ ob_speed.image_speed = 0
 if (instance_number(ob_puerta) &gt; 0)
 ob_puerta.vspeed = 0
 ob_acceso_server_controller.fail = 1
+audio_stop_sound(snd_musica_hl2_dubstep);
 </string>
           </argument>
         </arguments>

@@ -25,35 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Inicializar variables
+            <string>///Inicializar variables y musica
 
 seleccionado=0;
 
+audio_play_sound(snd_sala_servers,0,true);
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>snd_sala_servers</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -231,7 +209,9 @@ seleccionado=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(ft_logo)
+            <string>///Dibujar logo
+
+draw_set_font(ft_logo)
 draw_text_transformed(0,50,"            JJJJJJJJJJJ          AAA                 QQQQQQQQQ     UUUUUUUU     UUUUUUUUIIIIIIIIIIEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR      SSSSSSSSSSSSSSS #            J:::::::::J         A:::A              QQ:::::::::QQ   U::::::U     U::::::UI::::::::IE::::::::::::::::::::ER::::::::::::::::R   SS:::::::::::::::S#            J:::::::::J        A:::::A           QQ:::::::::::::QQ U::::::U     U::::::UI::::::::IE::::::::::::::::::::ER::::::RRRRRR:::::R S:::::SSSSSS::::::S#            JJ:::::::JJ       A:::::::A         Q:::::::QQQ:::::::QUU:::::U     U:::::UUII::::::IIEE::::::EEEEEEEEE::::ERR:::::R     R:::::RS:::::S     SSSSSSS#              J:::::J        A:::::::::A        Q::::::O   Q::::::Q U:::::U     U:::::U   I::::I    E:::::E       EEEEEE  R::::R     R:::::RS:::::S            #              J:::::J       A:::::A:::::A       Q:::::O     Q:::::Q U:::::D     D:::::U   I::::I    E:::::E               R::::R     R:::::RS:::::S            #              J:::::J      A:::::A A:::::A      Q:::::O     Q:::::Q U:::::D     D:::::U   I::::I    E::::::EEEEEEEEEE     R::::RRRRRR:::::R  S::::SSSS         #              J:::::j     A:::::A   A:::::A     Q:::::O     Q:::::Q U:::::D     D:::::U   I::::I    E:::::::::::::::E     R:::::::::::::RR    SS::::::SSSSS    #              J:::::J    A:::::A     A:::::A    Q:::::O     Q:::::Q U:::::D     D:::::U   I::::I    E:::::::::::::::E     R::::RRRRRR:::::R     SSS::::::::SS  #  JJJJJJJ     J:::::J   A:::::AAAAAAAAA:::::A   Q:::::O     Q:::::Q U:::::D     D:::::U   I::::I    E::::::EEEEEEEEEE     R::::R     R:::::R       SSSSSS::::S #  J:::::J     J:::::J  A:::::::::::::::::::::A  Q:::::O  QQQQ:::::Q U:::::D     D:::::U   I::::I    E:::::E               R::::R     R:::::R            S:::::S#  J::::::J   J::::::J A:::::AAAAAAAAAAAAA:::::A Q::::::O Q::::::::Q U::::::U   U::::::U   I::::I    E:::::E       EEEEEE  R::::R     R:::::R            S:::::S#  J:::::::JJJ:::::::JA:::::A             A:::::AQ:::::::QQ::::::::Q U:::::::UUU:::::::U II::::::IIEE::::::EEEEEEEE:::::ERR:::::R     R:::::RSSSSSSS     S:::::S#   JJ:::::::::::::JJA:::::A               A:::::AQQ::::::::::::::Q   UU:::::::::::::UU  I::::::::IE::::::::::::::::::::ER::::::R     R:::::RS::::::SSSSSS:::::S#     JJ:::::::::JJ A:::::A                 A:::::A QQ:::::::::::Q      UU:::::::::UU    I::::::::IE::::::::::::::::::::ER::::::R     R:::::RS:::::::::::::::SS #       JJJJJJJJJ  AAAAAAA                   AAAAAAA  QQQQQQQQ::::QQ      UUUUUUUUU      IIIIIIIIIIEEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR SSSSSSSSSSSSSSS   #                                                             Q:::::Q                                                                                           #                                                              QQQQQQ",0.7,0.7,0);
 draw_text_transformed(15,260,"(SIMULATOR)",0.9,0.9,0);
 </string>
@@ -539,7 +519,7 @@ switch(seleccionado){
         instance_create(300,540,obj_carga);
         break;
     case 1:
-        room_goto(menu_ajustes);
+        room_goto(rm_menu_ajustes);
         break;
     case 2:
         game_end();
