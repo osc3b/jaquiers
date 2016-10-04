@@ -76,13 +76,13 @@
     <timeline>timelines\tm_loose</timeline>
     <timeline>timelines\tm_win</timeline>
     <timeline>timelines\tm_batalla_pokemon</timeline>
+    <timeline>timelines\dialogo_pokemon</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\inicio</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_menu2</room>
     <room>rooms\rm_menu_ajustes</room>
-    <room>rooms\rm_0</room>
     <room>rooms\rm_acceso_server</room>
     <room>rooms\rm_terminado</room>
     <room>rooms\rm_batalla</room>
