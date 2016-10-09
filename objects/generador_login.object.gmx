@@ -33,13 +33,19 @@ frase_login[2]="Successfully logged in ";
 frase_login[3]="@jaquierOS:~$ ";
 
 j=0;
-i=0;
+i=1;
 longitud_frase=string_length(frase_login[i]);
+longitud_frase0=string_length(frase_login[0]);
 escribir[0]=string_copy(frase_login[0],0,j);
 escribir[1]=string_copy(frase_login[1],0,j);
 escribir[2]=string_copy(frase_login[2],0,j);
 escribir[3]=string_copy(frase_login[3],0,j);
 alarma0=0;
+
+escrito=0;
+creado=0;
+
+keyboard_input="";
 
 audio_play_sound(snd_teclado,0,false);
 
@@ -103,26 +109,51 @@ audio_play_sound(snd_teclado,0,false);
             <kind>1</kind>
             <string>///Escribir letra a letra las frases guardadas, como si estubiese escribiendo
 
-if(j&lt;longitud_frase){
-    escribir[i]=string_copy(frase_login[i],0,j);
-    j+=1;
-}
-else{
-    if(i&lt;3){
-        i+=1;
-        longitud_frase=string_length(frase_login[i]);
-        escribir[i]="";
-        j=0;
+if(escrito==0){
+    if(j&lt;longitud_frase0){
+        escribir[0]=string_copy(frase_login[0],0,j);
+        j+=1;
     }
     else{
-        if(alarma0==0){
+        if(creado==0){
             audio_stop_sound(snd_teclado);
-            alarm[0]=60;
-            alarma0=1;
+            instance_create(210,0,consola_keyboard_input);
+            creado=1;
+        }
+        else{  
+            keyboard_input=consola_keyboard_input.txt_input;
+            if(consola_keyboard_input.terminado==1){
+                global.nombre=consola_keyboard_input.txt_input;
+                audio_play_sound(snd_teclado,0,false);
+                j=0;
+                escrito=1;
+            }
         }
     }
 }
 
+
+if(escrito==1){
+    if(j&lt;longitud_frase){
+        escribir[i]=string_copy(frase_login[i],0,j);
+        j+=1;
+    }
+    else{
+        if(i&lt;3){
+            i+=1;
+            longitud_frase=string_length(frase_login[i]);
+            escribir[i]="";
+            j=0;
+        }
+        else{
+            if(alarma0==0){
+                audio_stop_sound(snd_teclado);
+                alarm[0]=60;
+                alarma0=1;
+            }
+        }
+    }
+}
 
 </string>
           </argument>
@@ -192,35 +223,11 @@ else{
             <kind>1</kind>
             <string>///Dibujar el texto
 
-draw_text_transformed(0, 0, escribir[0],0.5,0.5,1);
-draw_text_transformed(0, 20, escribir[1],0.5,0.5,1);
-draw_text_transformed(0, 40, escribir[2],0.5,0.5,1);
-draw_text_transformed(0, 60, escribir[3],0.5,0.5,1);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="13">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>audio_stop_sound(snd_teclado);
-room_goto(rm_menu);
-instance_destroy();
+draw_text_transformed(0, 5, escribir[0] + " " + keyboard_input,0.6,0.6,1);
+draw_text_transformed(600, 5, "//Escribe tu nombre de usuario",0.6,0.6,1);
+draw_text_transformed(0, 30, escribir[1],0.6,0.6,1);
+draw_text_transformed(0, 55, escribir[2],0.6,0.6,1);
+draw_text_transformed(0, 80, escribir[3],0.6,0.6,1);
 </string>
           </argument>
         </arguments>

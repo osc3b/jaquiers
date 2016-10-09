@@ -42,6 +42,7 @@
     <background>background\bg_pokemon</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_menu</font>
     <font>fonts\ft_logo</font>
@@ -49,6 +50,7 @@
   <objects name="objects">
     <objects name="menu">
       <object>objects\camara</object>
+      <object>objects\consola_keyboard_input</object>
       <object>objects\generador_fuentesmenu</object>
       <object>objects\generador_ajustes</object>
       <object>objects\generador_fuentesmenu2</object>
