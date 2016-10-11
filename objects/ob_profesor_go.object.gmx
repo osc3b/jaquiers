@@ -54,10 +54,10 @@
           <argument>
             <kind>1</kind>
             <string>///Inicializar textos, variables y sonidos
-dialogo[0]="Hola "; //Primer dialogo
-dialogo[1]="Que tal ";
-dialogo[2]="Vas a morir ";
-dialogo[3]="Cabron ";
+dialogo[0]="Hola " + global.nombre + " "; //Primer dialogo
+dialogo[1]="Que tal? ";
+dialogo[2]="Vas a morir :) ";
+dialogo[3]=" ";
 dialogo[4]=" ";
 dialogo[5]=" ";
 
@@ -132,6 +132,7 @@ orden_dialogo=0; //Numero de bocadillo de dialogo
 
 if(j&lt;longitud_frase){
     escribir[i]=string_copy(dialogo[i],0,j);
+    audio_play_sound(snd_hablar,0,false);
     j+=1;
 }
 else{
@@ -256,12 +257,12 @@ else{
             <kind>1</kind>
             <string>///Dibujar el texto
 
-draw_text_transformed(820, 180, escribir[0],0.5,0.5,1);
-draw_text_transformed(820, 200, escribir[1],0.5,0.5,1);
-draw_text_transformed(820, 220, escribir[2],0.5,0.5,1);
-draw_text_transformed(820, 240, escribir[3],0.5,0.5,1);
-draw_text_transformed(820, 260, escribir[4],0.5,0.5,1);
-draw_text_transformed(820, 280, escribir[5],0.5,0.5,1);
+draw_text_transformed(820, 180, escribir[0],0.5,0.5,0);
+draw_text_transformed(820, 200, escribir[1],0.5,0.5,0);
+draw_text_transformed(820, 220, escribir[2],0.5,0.5,0);
+draw_text_transformed(820, 240, escribir[3],0.5,0.5,0);
+draw_text_transformed(820, 260, escribir[4],0.5,0.5,0);
+draw_text_transformed(820, 280, escribir[5],0.5,0.5,0);
 </string>
           </argument>
         </arguments>

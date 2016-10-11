@@ -131,7 +131,8 @@ ob_random_letter.image_blend = c_lime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_terminado);
+            <string>audio_stop_sound(snd_musica_hl2_dubstep);
+room_goto(rm_batalla);
 </string>
           </argument>
         </arguments>

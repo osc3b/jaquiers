@@ -11,9 +11,11 @@
     <sound>sound\snd_teclado</sound>
     <sound>sound\snd_tecla</sound>
     <sound>sound\snd_musica_hl2_dubstep</sound>
-    <sound>sound\snd_rebote</sound>
+    <sound>sound\snd_rebote_pokeball</sound>
     <sound>sound\snd_musica_megalovania</sound>
     <sound>sound\snd_damage</sound>
+    <sound>sound\snd_hablar</sound>
+    <sound>sound\snd_pokeball</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
@@ -42,10 +44,10 @@
     <background>background\bg_pokemon</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
   <fonts name="fonts">
     <font>fonts\font_menu</font>
     <font>fonts\ft_logo</font>
+    <font>fonts\ft_titles</font>
   </fonts>
   <objects name="objects">
     <objects name="menu">

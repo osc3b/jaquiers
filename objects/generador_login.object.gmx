@@ -117,7 +117,7 @@ if(escrito==0){
     else{
         if(creado==0){
             audio_stop_sound(snd_teclado);
-            instance_create(210,0,consola_keyboard_input);
+            instance_create(0,0,consola_keyboard_input);
             creado=1;
         }
         else{  
@@ -223,11 +223,11 @@ if(escrito==1){
             <kind>1</kind>
             <string>///Dibujar el texto
 
-draw_text_transformed(0, 5, escribir[0] + " " + keyboard_input,0.6,0.6,1);
-draw_text_transformed(600, 5, "//Escribe tu nombre de usuario",0.6,0.6,1);
-draw_text_transformed(0, 30, escribir[1],0.6,0.6,1);
-draw_text_transformed(0, 55, escribir[2],0.6,0.6,1);
-draw_text_transformed(0, 80, escribir[3],0.6,0.6,1);
+draw_text_transformed(0, 1, escribir[0] + " " + keyboard_input,0.6,0.6,0);
+draw_text_transformed(580, 1, "//Escribe tu nombre de usuario",0.6,0.6,0);
+draw_text_transformed(0, 26, escribir[1],0.6,0.6,0);
+draw_text_transformed(0, 51, escribir[2],0.6,0.6,0);
+draw_text_transformed(0, 76, escribir[3],0.6,0.6,0);
 </string>
           </argument>
         </arguments>
