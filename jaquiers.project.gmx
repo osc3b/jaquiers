@@ -16,6 +16,8 @@
     <sound>sound\snd_damage</sound>
     <sound>sound\snd_hablar</sound>
     <sound>sound\snd_pokeball</sound>
+    <sound>sound\snd_pokeball_open</sound>
+    <sound>sound\snd_pikachu</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
@@ -39,6 +41,8 @@
     <sprite>sprites\sp_borde</sprite>
     <sprite>sprites\sp_profesor_go</sprite>
     <sprite>sprites\sp_dialogo</sprite>
+    <sprite>sprites\sp_pikachu</sprite>
+    <sprite>sprites\sp_rayo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_pokemon</background>
@@ -69,12 +73,16 @@
     <object>objects\ob_random_letter</object>
     <object>objects\ob_speed</object>
     <object>objects\ob_speedfade</object>
+    <object>objects\ob_terminado_acceso</object>
     <object>objects\ob_batalla</object>
     <object>objects\ob_campo_batalla</object>
     <object>objects\ob_skull</object>
     <object>objects\ob_pokeball</object>
+    <object>objects\ob_pokeball_animacion</object>
     <object>objects\ob_borde</object>
     <object>objects\ob_profesor_go</object>
+    <object>objects\ob_pikachu</object>
+    <object>objects\ob_rayo</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>

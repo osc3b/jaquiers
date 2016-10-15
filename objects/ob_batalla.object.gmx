@@ -29,7 +29,7 @@
 instance_create(room_width/2,630,ob_skull);
 instance_create(room_width/2,620,ob_profesor_go);
 
-alarm[0]=140;
+alarm[0]=280;
 </string>
           </argument>
         </arguments>

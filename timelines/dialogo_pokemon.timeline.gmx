@@ -27,7 +27,7 @@
     </event>
   </entry>
   <entry>
-    <step>100</step>
+    <step>160</step>
     <event>
       <action>
         <libid>1</libid>
@@ -45,13 +45,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dialogo[0]="Mmmm "; //Segundo dialogo
-dialogo[1]="Ahora tendria que decir ";
-dialogo[2]="algo epico... ";
-dialogo[3]=" ";
-dialogo[4]=" ";
-dialogo[5]="ALGO ";
-                                     //Maximo
+            <string>dialogo[0]="Mmmm... Ya veo "; //Segundo dialogo
+dialogo[1]="¿Sigues queriendo esos datos? ";
+dialogo[2]="Pues si los quieres tendras ";
+dialogo[3]="que luchar por ellos. ";
+dialogo[4]="  ";
+dialogo[5]="VAS A PASAR UN MAL RATO ";
+                                       //Maximo
 numero_frases=6; //En el cuadro de dialogo caben hasta 6 frases. Dejar siempre a 6
 
 j=0;

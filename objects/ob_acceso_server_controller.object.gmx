@@ -31,7 +31,7 @@ fail = 0
 win = 0
 randoms = 0
 fin = 0
-muros = 0
+muros = 1
 instance_create(x,620,ob_speed)
 alarm[0] = 150
 alarm[4] = 30
@@ -207,6 +207,28 @@ if (win == 1 &amp;&amp; j &lt; 41){
         }
     }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="80">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_terminado</room>
           </argument>
         </arguments>
       </action>
