@@ -43,11 +43,18 @@
     <sprite>sprites\sp_dialogo</sprite>
     <sprite>sprites\sp_pikachu</sprite>
     <sprite>sprites\sp_rayo</sprite>
+    <sprite>sprites\sp_rayos_muros</sprite>
+    <sprite>sprites\sp_access_granted</sprite>
+    <sprite>sprites\sp_fondo_acceso</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_pokemon</background>
+    <background>background\bg_mapa</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\ElegirAtaquePikachu.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font_menu</font>
     <font>fonts\ft_logo</font>
@@ -74,6 +81,7 @@
     <object>objects\ob_speed</object>
     <object>objects\ob_speedfade</object>
     <object>objects\ob_terminado_acceso</object>
+    <object>objects\ob_mapa_pokemon</object>
     <object>objects\ob_batalla</object>
     <object>objects\ob_campo_batalla</object>
     <object>objects\ob_skull</object>
@@ -83,18 +91,23 @@
     <object>objects\ob_profesor_go</object>
     <object>objects\ob_pikachu</object>
     <object>objects\ob_rayo</object>
+    <object>objects\ob_rayo_muro</object>
+    <object>objects\ob_fondo_acceso</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>
     <timeline>timelines\tm_win</timeline>
     <timeline>timelines\tm_batalla_pokemon</timeline>
     <timeline>timelines\dialogo_pokemon</timeline>
+    <timeline>timelines\tm_pikachu1</timeline>
+    <timeline>timelines\tm_pikachu2</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\inicio</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_menu2</room>
     <room>rooms\rm_menu_ajustes</room>
+    <room>rooms\rm_mapa</room>
     <room>rooms\rm_acceso_server</room>
     <room>rooms\rm_terminado</room>
     <room>rooms\rm_batalla</room>

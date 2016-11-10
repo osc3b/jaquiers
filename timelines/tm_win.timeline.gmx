@@ -80,6 +80,8 @@ ob_acceso_server_controller.fail = 0
             <kind>1</kind>
             <string>ob_random_letter.image_speed = 0
 ob_random_letter.image_blend = c_lime
+ob_acceso_server_controller.mensaje=1;
+
 </string>
           </argument>
         </arguments>
@@ -106,6 +108,7 @@ ob_random_letter.image_blend = c_lime
           <argument>
             <kind>1</kind>
             <string>vspeed = random(16) + 12
+ob_acceso_server_controller.mensaje=2;
 </string>
           </argument>
         </arguments>

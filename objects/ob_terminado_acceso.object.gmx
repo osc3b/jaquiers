@@ -31,7 +31,7 @@ frase_login[0]="Hackeo completado. Acceso al servidor satisfactorio. ";
 frase_login[1]="Accediendo a datos del sistema ";
 frase_login[2]="... ";
 frase_login[3]="Acceso denegado ";
-frase_login[4]="Se he datectado una amenaza... Procediendo a su eliminacion ";
+frase_login[4]="Se he detectado una amenaza... Procediendo a su eliminacion ";
 frase_login[5]="... ";
 frase_login[6]="No se ha podido eliminar... Procediendo a eliminacion manual... ";
 
@@ -39,7 +39,7 @@ j=0;
 i=0;
 
 velocidad_texto[0]=0.5; //Velocidad del texto de 0 a 1. Solo poner valores 1, 0.5, 0.2, 0.1 y menores
-velocidad_texto[1]=0.2;
+velocidad_texto[1]=0.5;
 velocidad_texto[2]=0.05;
 velocidad_texto[3]=0.5;
 velocidad_texto[4]=0.5;
@@ -305,6 +305,48 @@ draw_text_transformed(0, 126, escribir[4],0.6,0.6,0);
 draw_text_transformed(0, 151, escribir[5],0.6,0.6,0);
 draw_text_transformed(0, 201, escribir[6],0.6,0.6,0);
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>rm_batalla</room>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>212</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_sala_servers</sound>
           </argument>
         </arguments>
       </action>

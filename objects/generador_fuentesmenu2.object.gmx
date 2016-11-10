@@ -797,11 +797,11 @@ switch(seleccionado){
         break;
     case 0: 
         audio_stop_sound(snd_sala_servers);
-        room_goto(rm_acceso_server);
+        room_goto(rm_mapa);
         instance_destroy();
         break;
     case 1:
-        room_goto(rm_batalla);
+        room_goto(rm_terminado);
         audio_stop_sound(snd_sala_servers);
         instance_destroy();
         break;
