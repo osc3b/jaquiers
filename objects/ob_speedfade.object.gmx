@@ -58,8 +58,13 @@ if (instance_number(ob_speedfade) &lt; 3){
           <argument>
             <kind>1</kind>
             <string>image_alpha -= 0.4
+
+instance_create(x,y,ob_haz);
+ob_haz.image_alpha= image_alpha;
+
 if image_alpha &lt;= 0
     instance_destroy()
+    
 </string>
           </argument>
         </arguments>

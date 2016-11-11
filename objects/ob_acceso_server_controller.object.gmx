@@ -188,7 +188,7 @@ if (win == 1 &amp;&amp; j &lt; 41){
 if (win == 1 &amp;&amp; j &lt; 41){
         instance_create(16 * i + 40,16 * j + 40,ob_random_letter)
             i += 1
-        if (i = 74){
+        if (i == 74){
             j += 2
             i = 0
         }
@@ -204,7 +204,7 @@ if (win == 1 &amp;&amp; j &lt; 41){
 if (win == 1 &amp;&amp; j &lt; 41){
         instance_create(16 * i + 40,16 * j + 40,ob_random_letter)
             i += 1
-        if (i = 74){
+        if (i == 74){
             j += 2
             i = 0
         }
