@@ -28,6 +28,31 @@
             <string>lock = 0
 modo = 2
 pos = 2
+wasd=1;
+alarm[0]=90;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>wasd=0;
 </string>
           </argument>
         </arguments>
@@ -168,8 +193,12 @@ ob_puerta.image_index = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (modo = 1)
+            <string>if (modo == 1)
 y = y - 4
+
+if(y &gt; 100 &amp;&amp; modo == 2 &amp;&amp; ob_acceso_server_controller.fail == 0 &amp;&amp; ob_acceso_server_controller.win == 0){
+    y-=10;
+}
 </string>
           </argument>
         </arguments>
@@ -194,6 +223,10 @@ y = y - 4
             <kind>1</kind>
             <string>if (modo == 1)
 y = y + 4
+
+if(y &lt; 600 &amp;&amp; modo == 2 &amp;&amp; ob_acceso_server_controller.fail == 0 &amp;&amp; ob_acceso_server_controller.win == 0){
+    y+=9;
+}
 </string>
           </argument>
         </arguments>
@@ -266,6 +299,10 @@ x = x - 16
             <kind>1</kind>
             <string>if (modo == 1)
 y = y + 4
+
+if(y &lt; 600 &amp;&amp; modo == 2 &amp;&amp; ob_acceso_server_controller.fail == 0 &amp;&amp; ob_acceso_server_controller.win == 0){
+    y+=9;
+}
 </string>
           </argument>
         </arguments>
@@ -312,8 +349,12 @@ x = x + 16
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (modo = 1)
+            <string>if (modo == 1)
 y = y - 4
+
+if(y &gt; 100 &amp;&amp; modo == 2 &amp;&amp; ob_acceso_server_controller.fail == 0 &amp;&amp; ob_acceso_server_controller.win == 0){
+    y-=10;
+}
 </string>
           </argument>
         </arguments>
@@ -338,6 +379,32 @@ y = y - 4
             <kind>1</kind>
             <string>if (modo = 1)
 x = x - 16
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if(wasd==1){
+    draw_sprite(sp_wasd,0,x,y-70);
+}
 </string>
           </argument>
         </arguments>

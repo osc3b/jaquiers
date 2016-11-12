@@ -18,6 +18,7 @@
     <sound>sound\snd_pokeball</sound>
     <sound>sound\snd_pokeball_open</sound>
     <sound>sound\snd_pikachu</sound>
+    <sound>sound\snd_sirena</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\notexture</sprite>
@@ -45,7 +46,11 @@
     <sprite>sprites\sp_rayo</sprite>
     <sprite>sprites\sp_rayos_muros</sprite>
     <sprite>sprites\sp_access_granted</sprite>
+    <sprite>sprites\sp_firewall_detectado</sprite>
     <sprite>sprites\sp_fondo_acceso</sprite>
+    <sprite>sprites\sp_barra_progre</sprite>
+    <sprite>sprites\sp_alarma</sprite>
+    <sprite>sprites\sp_wasd</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_pokemon</background>
@@ -93,6 +98,8 @@
     <object>objects\ob_rayo</object>
     <object>objects\ob_rayo_muro</object>
     <object>objects\ob_fondo_acceso</object>
+    <object>objects\ob_alarma</object>
+    <object>objects\ob_firewall_detectado</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>

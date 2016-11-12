@@ -34,12 +34,84 @@ fin = 0
 muros = 1
 mensaje=0;
 animacion=0;
+progre=0;
+subima=0;
+emergencia=0;
 instance_create(x,600,ob_speed)
-alarm[0] = 150
+alarm[0] = 260
 alarm[4] = 30
+alarm[5] = 160
 
 audio_play_sound(snd_musica_hl2_dubstep,0,true);
 audio_sound_gain(snd_musica_hl2_dubstep,0.5,0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>ob_alarma</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>emergencia=0;
+instance_create(room_width/2,room_height/2,ob_firewall_detectado);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Emergencia
+
+audio_play_sound(snd_sirena,0,false);
+emergencia=1;
+alarm[6]=60;
+instance_create(0,0,ob_alarma)
 </string>
           </argument>
         </arguments>
@@ -213,6 +285,42 @@ if (win == 1 &amp;&amp; j &lt; 41){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Step barra progreso
+
+if(progre&lt;=640&amp;&amp;muros==1&amp;&amp;fail==0){
+    progre=(160/260)*(260-alarm[0]);
+}else if(progre&lt;=640&amp;&amp;muros&gt;1&amp;&amp;fail==0){
+    progre=((640/4)*(muros-1))+(160/450)*(450-alarm[0]);
+}
+
+if(fail == 0 &amp;&amp; win == 0){
+    if(subima&lt;2){
+        subima+=1;
+    }
+    else{
+        subima=0;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -238,6 +346,39 @@ if (win == 1 &amp;&amp; j &lt; 41){
 if(mensaje==2){
     draw_sprite(sp_access_granted,0,room_width/2,room_height/2);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Barra progreso
+
+draw_rectangle_colour(1200,40,1240,680,c_black,c_black,c_black,c_black,false);
+draw_sprite(sp_barra_progre,0,1200,40);
+draw_rectangle_colour(1200,40,1240,680-progre,c_black,c_black,c_black,c_black,false);
+draw_line_width_colour(1200,200,1240,200,2,c_red,c_red);
+draw_line_width_colour(1200,360,1240,360,2,c_red,c_red);
+draw_line_width_colour(1200,520,1240,520,2,c_red,c_red);
+draw_line_width_colour(1200,40,1200,680,5,c_aqua,c_aqua);
+draw_line_width_colour(1240,40,1240,680,5,c_aqua,c_aqua);
+draw_line_width_colour(1200,40,1240,40,5,c_aqua,c_aqua);
+draw_line_width_colour(1200,680,1240,680,5,c_aqua,c_aqua);
+draw_sprite_ext(sp_speed,subima,1220,688-progre,0.5,0.5,0,c_white,1);
 </string>
           </argument>
         </arguments>
