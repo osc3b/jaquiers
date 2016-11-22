@@ -82,6 +82,31 @@ ob_acceso_server_controller.fail = 0
 ob_random_letter.image_blend = c_lime
 ob_acceso_server_controller.mensaje=1;
 
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>ob_acceso_server_controller</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Bajar musica
+
+audio_sound_gain(snd_musica_hl2_dubstep,0,4000);
 </string>
           </argument>
         </arguments>

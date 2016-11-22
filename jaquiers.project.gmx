@@ -51,6 +51,7 @@
     <sprite>sprites\sp_barra_progre</sprite>
     <sprite>sprites\sp_alarma</sprite>
     <sprite>sprites\sp_wasd</sprite>
+    <sprite>sprites\sp_baya</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_pokemon</background>
@@ -100,6 +101,7 @@
     <object>objects\ob_fondo_acceso</object>
     <object>objects\ob_alarma</object>
     <object>objects\ob_firewall_detectado</object>
+    <object>objects\ob_baya</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>
