@@ -33,6 +33,7 @@ alarm[0]=280;
 
 ataque1=0;
 ataque2=0;
+ataque3=0;
 
 tm_posicion=0;
 

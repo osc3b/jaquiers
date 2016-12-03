@@ -52,6 +52,7 @@
     <sprite>sprites\sp_alarma</sprite>
     <sprite>sprites\sp_wasd</sprite>
     <sprite>sprites\sp_baya</sprite>
+    <sprite>sprites\sp_pikabola</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_pokemon</background>
@@ -102,6 +103,8 @@
     <object>objects\ob_alarma</object>
     <object>objects\ob_firewall_detectado</object>
     <object>objects\ob_baya</object>
+    <object>objects\ob_pikabola</object>
+    <object>objects\ob_pokeball_seguir</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tm_loose</timeline>
@@ -110,6 +113,7 @@
     <timeline>timelines\dialogo_pokemon</timeline>
     <timeline>timelines\tm_pikachu1</timeline>
     <timeline>timelines\tm_pikachu2</timeline>
+    <timeline>timelines\tm_pikachu3</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\inicio</room>
